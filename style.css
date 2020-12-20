@@ -1,0 +1,99 @@
+:root {
+  --primary: #75c04d;
+  --accent: #363276;
+}
+
+*,
+button,
+input {
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  background-color: whitesmoke;
+}
+
+.bg-success {
+  background-color: var(--primary) !important;
+}
+
+.btn-primary {
+  border-color: var(--accent) !important;
+  background-color: var(--accent) !important;
+}
+.btn-primary:hover {
+  border-color: hsl(243, 40%, 45%) !important;
+  background-color: hsl(243, 40%, 45%) !important;
+}
+.btn-primary:focus {
+  box-shadow: 0 0 0 0.2rem rgba(53, 50, 117, 0.3) !important;
+}
+
+.navbar {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.jumbotron {
+  height: 60vh;
+  color: white;
+  position: relative;
+  background-color: transparent;
+  text-shadow: 0 0 8px black;
+}
+.jumbotron > img {
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: -1;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  object-position: center;
+}
+
+.qs-modality-grid {
+  column-gap: 1.5rem;
+  row-gap: 2.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+}
+
+.qs-instructor .card-img {
+  height: 18rem;
+  object-fit: cover;
+  object-position: top;
+}
+
+.qs-footer {
+  color: white;
+  background-color: var(--primary);
+}
+
+.qs-information {
+  max-width: 18rem;
+  text-align: center;
+}
+
+.qs-information > .title {
+  font-size: 20px;
+  color: var(--accent);
+}
+
+.qs-icon {
+  color: var(--accent);
+  cursor: pointer;
+}
+.qs-icon:hover {
+  text-decoration: none !important;
+}
+
+@media (max-width: 576px) {
+  .qs-modality-grid {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .qs-modality-grid > .card {
+    width: 18rem;
+  }
+}
