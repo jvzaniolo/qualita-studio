@@ -9,6 +9,10 @@ input {
   font-family: 'Montserrat', sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: whitesmoke;
 }
@@ -31,6 +35,13 @@ body {
 
 .navbar {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+.navbar-dark .navbar-nav .nav-link {
+  transition: color 200ms ease;
+  color: rgba(255, 255, 255, 0.7);
+}
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: white;
 }
 
 .jumbotron {
@@ -80,11 +91,13 @@ body {
 }
 
 .qs-icon {
-  color: var(--accent);
   cursor: pointer;
+  color: var(--accent);
+  transition: color 200ms ease;
 }
 .qs-icon:hover {
   text-decoration: none !important;
+  color: hsl(243, 40%, 50%) !important;
 }
 
 @media (max-width: 576px) {
